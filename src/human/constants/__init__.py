@@ -3,7 +3,7 @@ import torch
 
 ARTIFACTS_DIR : str = "artifacts"
 SOURCE_DIR_NAME: str = "src"
-S3_BUCKET_DATA_URI = "s3://human-segmentation/data"
+S3_BUCKET_DATA_URI = "s3://human-segmentation/data/"
 ZIP_FILE_NAME: str = "data.zip"
 
 # constants related to data ingestion

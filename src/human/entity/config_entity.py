@@ -2,6 +2,8 @@ import os,sys
 from dataclasses import dataclass
 from from_root import from_root
 from src.human.constants import *
+from artifact_entity import *
+from constants import *
 
 @dataclass
 class DataIngestionConfig:
