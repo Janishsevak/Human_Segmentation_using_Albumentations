@@ -14,3 +14,7 @@ class DataTransformationArtifacts:
     validation_csv_file :str
 
 
+# Model trainer artifacts
+@dataclass
+class ModelTrainerArtifacts:
+    model_path: str
