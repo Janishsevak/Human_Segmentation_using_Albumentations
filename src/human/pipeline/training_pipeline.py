@@ -59,3 +59,14 @@ class TrainingPipeline:
          
         except Exception as e:
              raise CustomException(e, sys)
+        
+    def start_model_evaluation(self,data_transformation_artifact: DataTransformationArtifacts,model_trainer_artifacts: ModelTrainerArtifacts) -> ModelEvaluationArtifacts:
+        logging.info("Starting model evaluation in training pipeline")
+        try: 
+            model_evaluation = ModelEvaluation(self.model_evaluation_config, data_transformation_artifact, model_trainer_artifacts)
+            logging.info("Evaluating current trained model")
+            model_evaluation_artifacts = model_evaluation.initiate_model_evaluation()
+            logging.info("Model evaluation step completed successfully in train pipeline")
+            return model_evaluation_artifacts
+        except Exception as e:
+            raise CustomException(e, sys)
