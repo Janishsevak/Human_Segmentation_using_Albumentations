@@ -27,3 +27,7 @@ class ModelEvaluationArtifacts:
     trained_model_path: str
     s3_model_path: str
 
+# Model Pusher artifacts
+@dataclass
+class ModelPusherArtifacts:
+    response: dict
